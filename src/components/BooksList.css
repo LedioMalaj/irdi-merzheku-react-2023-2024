@@ -1,0 +1,39 @@
+/* src/components/BooksList.css */
+
+/* Stilizimi i librit në seksionin "Books List" */
+.books-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .book-item {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Stilizimi i butonit "Add to bookmarks" */
+  .add-to-bookmarks {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Stilizimi i butonit "Remove from bookmarks" */
+  .remove-from-bookmarks {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  

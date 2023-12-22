@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import BooksList from './components/BooksList';
+import BookmarksSection from './components/BookmarksSection';
 
-function App() {
+const App = () => {
+  const [activeTab, setActiveTab] = useState('books');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>My Bookstore App</h1>
+
+      {/* Butonat e Tabs */}
+      <button onClick={() => setActiveTab('books')}>Books</button>
+      <button onClick={() => setActiveTab('bookmarks')}>Bookmarks</button>
+
+      {/* Përmbajtja e shfaqur dinamikisht bazuar në "activeTab" */}
+      {activeTab === 'books' && <BooksList />}
+      {activeTab === 'bookmarks' && <BookmarksSection />}
+
     </div>
   );
-}
+};
 
 export default App;
